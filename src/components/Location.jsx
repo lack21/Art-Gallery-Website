@@ -8,7 +8,7 @@ function Location() {
       <img src={mapImage} alt="map-image" className="map-image" />
       <Link to="/Art-Gallery-Website" className="btn second">
         <img src={leftArrowIcon} alt="left-arrow-icon" />
-        Our Location
+        Back to Home
       </Link>
 
       <section className="location">
