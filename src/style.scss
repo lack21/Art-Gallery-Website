@@ -1,0 +1,388 @@
+// lear
+// Art Gallery
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Big Shoulders Display", sans-serif;
+}
+
+// Colors
+$brown: hsl(24, 56%, 63%);
+$black: hsl(0, 0%, 8%);
+$gray: hsl(0, 0%, 27%);
+$white: hsl(0, 0%, 100%);
+$lightGray: hsl(0, 0%, 93%);
+
+// Button
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $black;
+  width: 250px;
+  padding-left: 1.75rem;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+
+  img {
+    display: block;
+    padding: 1.5rem 1.75rem;
+    background-color: $brown;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+
+  &:hover {
+    background-color: $brown;
+
+    img {
+      background-color: $black;
+    }
+  }
+
+  &.second {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    padding-left: 0;
+    padding-right: 1.75rem;
+  }
+}
+
+// Top Images
+.top-images {
+  position: absolute;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  .left-image {
+    flex-basis: 100%;
+    background-color: $black;
+  }
+
+  .center-image {
+    flex-basis: 100%;
+    background-image: url(assets/image-hero.jpg);
+    background-size: cover;
+    background-position: bottom;
+  }
+
+  .right-image {
+    flex-basis: 100%;
+    background-color: $white;
+  }
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 75rem;
+  padding: 0 1rem;
+  margin: auto;
+
+  .title {
+    font-size: 6rem;
+    line-height: 6rem;
+    font-weight: 900;
+    color: $white;
+    text-transform: uppercase;
+    mix-blend-mode: difference;
+    padding-bottom: 3.5rem;
+  }
+
+  .content {
+    max-width: 400px;
+
+    .text {
+      font-size: 1.2rem;
+      font-family: "Outfit", sans-serif;
+      font-weight: 200;
+      color: $gray;
+      line-height: 2rem;
+      padding-bottom: 3.5rem;
+
+      span {
+        font-family: "Outfit", sans-serif;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// Gallery
+.gallery {
+  max-width: 75rem;
+  margin: 7.5rem auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .top-section {
+    display: flex;
+    gap: 2rem;
+
+    .left-content {
+      background-color: $lightGray;
+      padding: 3rem;
+      width: 40%;
+
+      .heading {
+        font-size: 4rem;
+        text-transform: uppercase;
+        font-weight: 900;
+      }
+
+      .text {
+        padding-top: 1.5rem;
+        font-family: "Outfit", sans-serif;
+        line-height: 2rem;
+        font-weight: 300;
+        font-size: 1.175rem;
+        color: $gray;
+      }
+    }
+
+    .first-image {
+      width: 60%;
+      object-fit: cover;
+    }
+  }
+
+  .bottom-section {
+    display: flex;
+    gap: 2rem;
+
+    .second-image {
+      width: 60%;
+      object-fit: cover;
+    }
+
+    .right-content {
+      display: flex;
+      flex-direction: column;
+      width: 40%;
+      gap: 2rem;
+
+      .third-image {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .bottom-right-content {
+        flex-basis: 100%;
+        background-color: $black;
+        color: $white;
+        padding: 3rem;
+
+        .heading {
+          font-size: 4rem;
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+
+        .text {
+          padding-top: 1.5rem;
+          font-family: "Outfit", sans-serif;
+          line-height: 2rem;
+          font-weight: 300;
+          font-size: 1.175rem;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+// Map
+body .map-image ~ .footer {
+  background-color: $brown !important;
+}
+
+.map-image {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  display: block;
+}
+
+// Location
+.location {
+  padding: 5rem 1rem;
+  background-color: $black;
+  color: $white;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 75rem;
+    margin: auto;
+
+    .heading {
+      flex-basis: 100%;
+      font-size: 4.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .content {
+      flex-basis: 100%;
+
+      .name {
+        font-size: 2.25rem;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: $brown;
+        padding-bottom: 1.5rem;
+      }
+
+      .sub-name,
+      .text {
+        font-size: 1.1rem;
+        line-height: 1.75rem;
+        font-weight: 100;
+        font-family: "Outfit", sans-serif;
+      }
+
+      .text {
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}
+
+// Footer
+.footer {
+  padding: 2.5rem 1rem;
+  background-color: $black;
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 75rem;
+    margin: auto;
+
+    .logo {
+      display: block;
+      width: 150px;
+    }
+
+    .text {
+      max-width: 400px;
+      color: $white;
+      font-family: "Outfit", sans-serif;
+      font-weight: 100;
+      font-size: 1.1rem;
+      line-height: 1.5rem;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+
+      img {
+        display: block;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 868px) {
+  .top-images .left-image {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    .title {
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .content .text {
+      padding-bottom: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery,
+  .top-section,
+  .bottom-section {
+    flex-direction: column;
+
+    & > * {
+      width: 100% !important;
+    }
+  }
+
+  .top-images {
+    position: static;
+    height: 75vh;
+
+    .right-image {
+      display: none;
+    }
+  }
+
+  .header {
+    min-height: 75vh;
+
+    .title {
+      color: $black;
+      font-size: 4rem;
+    }
+  }
+
+  .gallery {
+    margin: 5rem auto;
+
+    .heading {
+      font-size: 3rem !important;
+    }
+  }
+
+  .footer .content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+  }
+
+  .location .container {
+    flex-direction: column;
+    gap: 2.5rem;
+
+    .heading {
+      font-size: 3rem;
+    }
+  }
+}
