@@ -26,7 +26,9 @@ function Home() {
           </p>
           <Link to="location" className="btn">
             <h3>Our Location</h3>
-            <img src={rightArrowIcon} alt="right-arrow-icon" />
+            <div>
+              <img src={rightArrowIcon} alt="right-arrow-icon" />
+            </div>
           </Link>
         </div>
       </header>
