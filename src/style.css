@@ -306,7 +306,7 @@ body .map-image ~ .footer {
     display: none;
   }
   .header {
-    min-height: 75vh;
+    height: 75vh;
   }
   .header .title {
     color: hsl(0, 0%, 8%);
