@@ -25,7 +25,8 @@ function Home() {
             you? <span>Visit us and find out.</span>
           </p>
           <Link to="location" className="btn">
-            Our Location <img src={rightArrowIcon} alt="right-arrow-icon" />
+            <h3>Our Location</h3>
+            <img src={rightArrowIcon} alt="right-arrow-icon" />
           </Link>
         </div>
       </header>
